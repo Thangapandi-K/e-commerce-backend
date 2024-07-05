@@ -1,10 +1,9 @@
 //import express
 const express = require('express');
+const userRouter = require('./routes/userRoutes');
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send('Hello World');
-});
+app.use('/api/v1', userRouter);
 
 
 module.exports = app
